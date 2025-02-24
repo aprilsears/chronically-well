@@ -1,0 +1,31 @@
+
+
+{
+  "name": "chronically-well",
+  "version": "1.0.0",
+  "description": "Code:You Web Dev Capstone Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aprilsears/chronically-well.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aprilsears/chronically-well/issues"
+  },
+  "homepage": "https://github.com/aprilsears/chronically-well#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
