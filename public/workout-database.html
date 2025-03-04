@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workout Database - Chronically Well">
+    <title>Workout Database - Chronically Well</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="primary-header" role="banner">
+        <div class="container nav-wrapper">
+            <a href="/" class="site-title">Chronically Well</a>
+            <nav class="primary-nav" role="navigation" aria-label="main navigation">
+                <a href="index.html#calculator">Calculator</a>
+                <a href="index.html#nutrition">Nutrition</a>
+                <a href="index.html#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="content-section" aria-labelledby="workout-database-title">
+            <div class="container">
+                <h2 id="workout-database-title" class="section-header">Workout Database</h2>
+                <div id="workout-container">
+                    <!-- This is where the workouts will be loaded from the database -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="primary-header">
+        <div class="container">
+            <p>&copy; 2025 Chronically Well. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/workout-database.js" defer></script>
+    <script src="js/load-workouts.js" defer></script>
+</body>
+</html>
