@@ -3,7 +3,7 @@ const workoutDatabase = {
         exercises: [
             {
                 name: "Incline Dumbbell Bench Press",
-                youtubeId: "video_id",
+                youtubeId: "6tW4LUaOxlE ",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight <5lbs), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -15,7 +15,7 @@ const workoutDatabase = {
             },
             {
                 name: "Incline Dumbbell Flyes",
-                youtubeId: "video_id",
+                youtubeId: "JSDpq14vCZ8",
                 sets: 3,
                 reps: "Beginner - 5-8 (light weight <5lbs), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -27,7 +27,7 @@ const workoutDatabase = {
             },
             {
                 name: "High Incline Dumbbell Shoulder Press",
-                youtubeId: "video_id",
+                youtubeId: "RLTy299fVVc",
                 sets: 3,
                 reps: "Beginner - 5-8 (light weight <5lbs), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -39,7 +39,7 @@ const workoutDatabase = {
             },
             { 
                 name: "Rope Tricep Extension",
-                youtubeId: "video_id",
+                youtubeId: "5dw9gAAdXjU",
                 sets: 3,
                 reps: "Beginner - 5-8 (light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -50,8 +50,8 @@ const workoutDatabase = {
 
             },
             { 
-                name: "Roap Overhead Tricep Extension",
-                youtubeId: "video_id",
+                name: "Rope Overhead Tricep Extension",
+                youtubeId: "Jp9RR9glHX4",
                 sets: 3,
                 reps: "Beginner - 5-8 (light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -63,7 +63,7 @@ const workoutDatabase = {
             },
             { 
                 name: "Tricep Pushdown",
-                youtubeId: "video_id",
+                youtubeId: "1FjkhpZsaxc",
                 sets: 3,
                 reps: "Beginner - 5-8 (light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",
@@ -81,7 +81,7 @@ const workoutDatabase = {
         exercises: [
             {
                 name: "Seated Cable Row",
-                youtubeId: "video_id",
+                youtubeId: "HCA4B1IDcAk",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Upper back, Shoulders, Arms, and Forearms",
@@ -92,7 +92,7 @@ const workoutDatabase = {
             },
             {
                 name: "45 Degree Barbell Row",
-                youtubeId: "video_id",
+                youtubeId: "Nqh7q3zDCoQ",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Upper back, Shoulders, Arms, and Forearms",
@@ -104,7 +104,7 @@ const workoutDatabase = {
             },
             {
                 name: "Chest Supported Dumbbell Row",
-                youtubeId: "video_id",
+                youtubeId: "tNRk2rWVgBo",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Upper back, Shoulders, Arms, and Forearms",
@@ -116,7 +116,7 @@ const workoutDatabase = {
             },
             {
                 name: "Lat Pulldown",
-                youtubeId: "video_id",
+                youtubeId: "8d6d46pGdQM",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Upper back, Shoulders, Arms, and Forearms",
@@ -129,7 +129,7 @@ const workoutDatabase = {
             },
             {
                 name: "Dumbbell Lateral Raise",
-                youtubeId: "video_id",
+                youtubeId: "Kl3LEzQ5Zqs",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Upper back, Shoulders, Arms, and Forearms",
@@ -140,7 +140,7 @@ const workoutDatabase = {
             },
             {
                 name: "Dumbbell Preacher Curl",
-                youtubeId: "video_id",
+                youtubeId: "0y4tdUNPdlE",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Bicep",
@@ -152,7 +152,7 @@ const workoutDatabase = {
             },
             {
                 name: "Dumbbell Incline Alternating Curl",
-                youtubeId: "video_id",      
+                youtubeId: "shYjCEjsuHg",      
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Bicep",
@@ -169,7 +169,7 @@ const workoutDatabase = {
         exercises: [
             {
                 name: "Leg Curl",
-                youtubeId: "video_id",
+                youtubeId: "EqCsK_vlnfE",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Hamstrings, Calves",
@@ -180,7 +180,7 @@ const workoutDatabase = {
             },
             {
                 name: "Leg Extension",
-                youtubeId: "video_id",
+                youtubeId: "9icS_gPceJQ",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Quads",
@@ -192,7 +192,7 @@ const workoutDatabase = {
 
             {
                 name: "Leg Press",
-                youtubeId: "video_id",
+                youtubeId: "fpYaVKypytg",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Quads, Glutes, Hamstrings, Calves",
@@ -203,7 +203,7 @@ const workoutDatabase = {
             },
             {
                 name: "Adductor Machine",
-                youtubeId: "video_id",
+                youtubeId: "6tJjQFK_Q9U",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 10-15, Modified - 3-5(no weight)",
                 impact: "Adductors(Inner Thighs)",
@@ -214,7 +214,7 @@ const workoutDatabase = {
             },
             {
                 name: "Abductor Machine",
-                youtubeId: "video_id",
+                youtubeId: "tn-ABeb1QAM",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight), Advanced - 10-15, Modified - 3-5(no weight)",
                 impact: "Abductors(Outer Thighs)",
