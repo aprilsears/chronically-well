@@ -3,7 +3,7 @@ const workoutDatabase = {
         exercises: [
             {
                 name: "Incline Dumbbell Bench Press",
-                youtubeId: "6tW4LUaOxlE ",
+                youtubeId: "6tW4LUaOxlE",
                 sets: 3,
                 reps: "Beginner - 5-8(light weight <5lbs), Advanced - 8-12, Modified - 3-5(no weight)",
                 impact: "Chest, Shoulders, Triceps",

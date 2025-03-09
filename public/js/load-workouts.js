@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const workoutCard = document.createElement('div');
                 workoutCard.classList.add('content-card');
 
+                const thumbnailUrl = `https://img.youtube.com/vi/${workout.youtubeId}/0.jpg`;
+
                 workoutCard.innerHTML = `
                     <h3>${workout.name}</h3>
                     <p>Sets: ${workout.sets}</p>
@@ -24,7 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Impact: ${workout.impact}</p>
                     <p>Rest: ${workout.rest}</p>
                     <p>Modifications: ${workout.modifications.join(', ')}</p>
-                    <a href="https://www.youtube.com/watch?v=${workout.youtubeId}" target="_blank">Watch Video</a>
+                    <div class="video-thumbnail">
+                        <a href="https://www.youtube.com/watch?v=${workout.youtubeId}" target="_blank">
+                            <img src="${thumbnailUrl}" alt="Video Thumbnail">
+                        </a>
+                    </div>
                 `;
 
                 categorySection.appendChild(workoutCard);

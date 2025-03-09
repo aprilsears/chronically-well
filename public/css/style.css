@@ -69,8 +69,37 @@ h1, h2, h3, h4 {
     font-size: 2rem;
     font-weight: lighter;
     color: #ffffff;
-}   
-
+}
+#player {
+    position: fixed;
+    top: 10rem;
+    right: 3rem;
+    width: 320px;
+    height: 180px; 
+    z-index: 1000; 
+}
+#nutrition-form input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    font-size: 16px;
+}
+#nutrition-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    border: solid 1px #000000;  
+    border-radius: 10px;
+    font-size: 16px;
+}
+#nutrition-form button[type="submit"]:hover {
+    background-color: #114c14;
+}
 
 /* Responsive Design */
 @media (max-width: 800px) {
@@ -83,6 +112,12 @@ h1, h2, h3, h4 {
     .primary-nav {
         flex-direction: column;
         gap: 1rem;
+    }
+    #player {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
     }
 
     .hero h1 {
@@ -103,10 +138,17 @@ h1, h2, h3, h4 {
     }
 
     .hero h1 {
+        text-align: right;
         font-size: 2rem;
+
     }
 
     .content-card {
         padding: 1rem;
+    }
+    #player {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
     }
 }
