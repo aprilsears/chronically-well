@@ -35,14 +35,24 @@ app.post('/api/nutrition', async (req, res) => {
     }
 });
 
-//  Route for the homepage
+// Route for the homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'), (err) => {
+        if (err) {
+            console.error('Error sending index.html:', err);
+            res.status(500).send('Internal Server Error');
+        }
+    });
 });
 
 // Route for the workout database page
 app.get('/workout-database', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'workout-database.html'));
+    res.sendFile(path.join(__dirname, 'public', 'workout-database.html'), (err) => {
+        if (err) {
+            console.error('Error sending workout-database.html:', err);
+            res.status(500).send('Internal Server Error');
+        }
+    });
 });
 
 // Start the server
