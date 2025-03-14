@@ -8,15 +8,36 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-h1, h2, h3, h4 {
+/* Typography */
+h1 {
+    font-size: 3rem;
+    margin-block: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 2rem;
     color: #000;
-    margin-bottom: 1rem;
 }
 
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-block: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+h3 {
+    font-size: 2rem;
+    margin-block: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+    align-items: center;
+    
+}
 
+/* Layout Components */
 .primary-header {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000;
@@ -38,86 +59,102 @@ h1, h2, h3, h4 {
     gap: 1rem;
 }
 
-.primary-nav a:hover, .primary-nav a:focus {
+.primary-nav a:hover, 
+.primary-nav a:focus {
     color: #fff;
     text-decoration: underline;
 }
 
-
-.hero {
-    background-color: transparent;
-    padding: 4rem 0;
-    text-align: center;
-}
- 
-.content-section {
-    padding: 2rem 0;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.content-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
 .site-title {
     font-size: 2rem;
     font-weight: lighter;
     color: #ffffff;
 }
-#player {
-    position: fixed;
-    top: 10rem;
-    right: 3rem;
-    width: 320px;
-    height: 180px; 
-    z-index: 1000; 
+
+/* Content Sections */
+.hero {
+    background-color: transparent;
+    padding: 4rem 0;
+    text-align: center;
 }
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center; 
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1000px; 
+    align-self: center; 
+    border: 1px solid #ccc; 
+    margin-bottom: 1rem; 
+}
+
+/* Forms */
 #nutrition-form input[type="text"] {
     width: 50%;
     padding: 10px;
-    margin: 10px 10px;
-    box-sizing: border-box;
+    margin: 10px;
     border: 2px solid #000000;
     border-radius: 15px;
     font-size: 16px;
 }
+
 #nutrition-form button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    margin: 10px 10px;
-    box-sizing: border-box;
+    margin: 10px;
     border: solid 1px #000000;  
     border-radius: 10px;
     font-size: 16px;
 }
+
 #nutrition-form button[type="submit"]:hover {
     background-color: #114c14;
 }
 
+/* Error Messages */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 800px) {
-    .nav-wrapper {
+    .nav-wrapper,
+    .primary-nav {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
     }
 
-    .primary-nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    #player {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin: 1rem 0;
+    .content-section,
+    .content-card {
+        max-width: 100%;
     }
 
     .hero h1 {
@@ -126,29 +163,22 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 500px) {
-    .nav-wrapper {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-
+    .nav-wrapper,
     .primary-nav {
-        flex-direction: column;
         gap: 0.5rem;
     }
 
     .hero h1 {
-        text-align: right;
+        text-align: center;
         font-size: 2rem;
-
     }
 
     .content-card {
-        padding: 1rem;
-    }
-    #player {
-        width: 100%;
-        height: auto;
-        margin: 1rem 0;
+      display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: space-between;
+        background: white;
+        margin: 1rem;
     }
 }

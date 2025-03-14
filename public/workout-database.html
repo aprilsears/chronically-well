@@ -6,7 +6,7 @@
     <meta name="description" content="Workout Database - Chronically Well">
     <title>Workout Database - Chronically Well</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/workout.css">
 </head>
 <body>
     <header class="primary-header" role="banner">
@@ -25,6 +25,7 @@
         <section class="content-section" aria-labelledby="workout-database-title">
             <div class="container">
                 <h2 id="workout-database-title" class="section-header">Workout Database</h2>
+                
                 <div id="workout-container"></div>
             </div>
         </section>
@@ -36,9 +37,10 @@
         </div>
     </footer>
 
-    <script src="js/load-workouts.js" defer></script>
-    <script src="youtube.js" defer></script>
-    <script src="js/workout-database.js" defer></script>
-
+    <!-- Loads workout database first -->
+    <script src="js/workout-database.js"></script>
+    
+    <!-- Loads the script that populates the UI -->
+    <script src="js/load-workouts.js"></script>
 </body>
 </html>

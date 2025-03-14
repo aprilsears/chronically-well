@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log(workoutDatabase); 
+    console.log('Loading workouts from database:', workoutDatabase); 
 
     const workoutContainer = document.getElementById('workout-container');
 
@@ -7,32 +7,94 @@ document.addEventListener('DOMContentLoaded', () => {
         const categories = ['push', 'pull', 'legs'];
 
         categories.forEach(category => {
-            const categorySection = document.createElement('section');
-            categorySection.classList.add('content-section');
-            categorySection.innerHTML = `<h2 class="section-header">${category.charAt(0).toUpperCase() + category.slice(1)} Exercises</h2>`;
+            const categorySection = document.createElement('div');
+            categorySection.classList.add('exercise-category');
+            
+            const categoryHeader = document.createElement('h2');
+            categoryHeader.classList.add('section-header');
+            categoryHeader.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} Exercises`;
+            categorySection.appendChild(categoryHeader);
             
             const exercises = workoutDatabase[category].exercises;
 
             exercises.forEach(workout => {
+                // Creates exercise card
                 const workoutCard = document.createElement('div');
-                workoutCard.classList.add('content-card');
+                workoutCard.classList.add('exercise-card');
 
-                const thumbnailUrl = `https://img.youtube.com/vi/${workout.youtubeId}/0.jpg`;
-
-                workoutCard.innerHTML = `
-                    <h3>${workout.name}</h3>
-                    <p>Sets: ${workout.sets}</p>
-                    <p>Reps: ${workout.reps}</p>
-                    <p>Impact: ${workout.impact}</p>
-                    <p>Rest: ${workout.rest}</p>
-                    <p>Modifications: ${workout.modifications.join(', ')}</p>
-                    <div class="video-thumbnail">
-                        <a href="https://www.youtube.com/watch?v=${workout.youtubeId}" target="_blank">
-                            <img src="${thumbnailUrl}" alt="Video Thumbnail">
-                        </a>
-                    </div>
-                `;
-
+                const exerciseHeader = document.createElement('div');
+                exerciseHeader.classList.add('exercise-header');
+                
+                const exerciseTitle = document.createElement('h3');
+                exerciseTitle.textContent = workout.name;
+                exerciseHeader.appendChild(exerciseTitle);
+                
+                workoutCard.appendChild(exerciseHeader);
+                
+                // Create details section
+                const exerciseDetails = document.createElement('div');
+                exerciseDetails.classList.add('exercise-details');
+                
+                // Create video container
+                const exerciseVideo = document.createElement('div');
+                exerciseVideo.classList.add('exercise-video');
+                
+                const videoContainer = document.createElement('div');
+                videoContainer.classList.add('video-container');
+                
+                const videoIframe = document.createElement('iframe');
+                videoIframe.src = `https://www.youtube.com/embed/${workout.youtubeId}`;
+                videoIframe.title = workout.name;
+                videoIframe.setAttribute('frameborder', '0');
+                videoIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                videoIframe.setAttribute('allowfullscreen', '');
+                
+                videoContainer.appendChild(videoIframe);
+                exerciseVideo.appendChild(videoContainer);
+                
+                // Creates exercise info container
+                const exerciseInfo = document.createElement('div');
+                exerciseInfo.classList.add('exercise-info');
+                
+                // Adds exercise details
+                const setsInfo = document.createElement('p');
+                setsInfo.innerHTML = `<strong>Sets:</strong> ${workout.sets}`;
+                
+                const repsInfo = document.createElement('p');
+                repsInfo.innerHTML = `<strong>Reps:</strong> ${workout.reps}`;
+                
+                const impactInfo = document.createElement('p');
+                impactInfo.innerHTML = `<strong>Impact:</strong> ${workout.impact}`;
+                
+                const restInfo = document.createElement('p');
+                restInfo.innerHTML = `<strong>Rest:</strong> ${workout.rest}`;
+                
+                const modsLabel = document.createElement('p');
+                modsLabel.innerHTML = `<strong>Modifications:</strong>`;
+                
+                const modsList = document.createElement('ul');
+                modsList.classList.add('modifications-list');
+                
+                workout.modifications.forEach(mod => {
+                    const modItem = document.createElement('li');
+                    modItem.textContent = mod;
+                    modsList.appendChild(modItem);
+                });
+                
+                // Append all info elements
+                exerciseInfo.appendChild(setsInfo);
+                exerciseInfo.appendChild(repsInfo);
+                exerciseInfo.appendChild(impactInfo);
+                exerciseInfo.appendChild(restInfo);
+                exerciseInfo.appendChild(modsLabel);
+                exerciseInfo.appendChild(modsList);
+                
+                // Add video and info to details
+                exerciseDetails.appendChild(exerciseVideo);
+                exerciseDetails.appendChild(exerciseInfo);
+            
+                workoutCard.appendChild(exerciseDetails);
+                
                 categorySection.appendChild(workoutCard);
             });
 

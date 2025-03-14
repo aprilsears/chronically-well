@@ -1,0 +1,132 @@
+@import url("reset.css");
+
+.primary-header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.primary-nav {
+    display: flex;
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+.primary-nav :hover, .primary-nav :focus {
+    color: #fff;
+    text-decoration: underline;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-block: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+.calculator-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    border-radius: 4px;
+    gap: 1rem;
+}
+
+#macroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.form-group select:focus {
+    outline: 2px solid #007bff;
+    border-color: #007bff;
+}
+
+button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.weight-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weight-input {
+    flex: 1;
+}
+
+.weight-select {
+    flex: 1;
+}
+
+.or-divider {
+    color: #666;
+    font-size: 0.9rem;
+}

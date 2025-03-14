@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+const { google } = require('googleapis');
 const app = express();
 const PORT = process.env.PORT || 3002;
 
@@ -10,6 +11,27 @@ app.use(express.json());
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+// YouTube API setup
+const youtube = google.youtube({
+  version: 'v3',
+  auth: process.env.YOUTUBE_API_KEY
+});
+
+// YouTube API endpoint
+app.get('/api/youtube/videos', async (req, res) => {
+  try {
+    const videoIds = req.query.ids.split(',');
+    const response = await youtube.videos.list({
+      part: 'snippet,contentDetails,statistics',
+      id: videoIds.join(',')
+    });
+    res.json(response.data.items);
+  } catch (error) {
+    console.error('Error fetching YouTube data:', error.response ? error.response.data : error.message);
+    res.status(500).json({ error: 'Failed to fetch YouTube data' });
+  }
+});
 
 // Nutritionix API integration
 app.post('/api/nutrition', async (req, res) => {

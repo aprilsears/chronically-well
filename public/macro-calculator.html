@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chronically Well - Customized workouts and nutrition planning for people with chronic illness">
+    <title>Macro-nutrient Calculator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/macro-calculator.css">
+</head>
+<body>
+        <header class="primary-header" role="banner">
+            <div class="container nav-wrapper">
+                <a href="/" class="site-title">Chronically Well</a>
+                <nav class="primary-nav" role="navigation" aria-label="main navigation">
+                    <a href="workout-database.html">Workouts</a> 
+                    <a href="macro-calculator.html">Calculator</a>
+                    <a href="nutrition.html">Nutrition</a>
+                    <a href="#about">About</a>
+                </nav>
+            </div>
+        </header>
+    <div class="calculator-container">
+        <h2>Macronutrient-Calculator</h2>
+        <form id="macroForm">
+            <div class="form-group">
+                <label for="weight">Weight (lbs):</label>
+                <div class="weight-input-group">
+                    <input type="number" id="weightManual" min="70" max="400" placeholder="Enter weight" class="weight-input">
+                    <span class="or-divider">or</span>
+                    <select id="weight" class="weight-select">
+                        <option value="">Select weight</option>
+                        <script>
+                            for(let i = 70; i <= 400; i++) {
+                                document.write(`<option value="${i}">${i} lbs</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="activity">Activity Level (8-10):</label>
+                <select id="activity" required>
+                    <option value="8">8 - Sedentary</option>
+                    <option value="9">9 - Moderately Active</option>
+                    <option value="10">10 - Extremely Active</option>
+                </select>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="results" class="results hidden">
+            <h3>Your Daily Macronutrient Needs:</h3>
+            <p>Maintenance Calories: <span id="calories"></span></p>
+            <p>Protein: <span id="protein"></span> grams</p>
+            <p>Fat: <span id="fat"></span> grams</p>
+            <p>Carbs: <span id="carbs"></span> grams</p>
+        </div>
+    </div>
+    <script src="js/macro-calculator.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/workout-database.js" defer></script>
+    <script src="js/nutrition.js" defer></script>
+</body>
+</html>
