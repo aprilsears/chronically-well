@@ -10,30 +10,30 @@ body {
 
 /* Typography */
 h1 {
-    font-size: 3rem;
-    margin-block: 1rem;
+    font-size: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #000;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 h2 {
+    font-size: 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 3rem;
-    margin-block: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-decoration: underline;
     color: #000;
 }
 h3 {
-    font-size: 2rem;
-    margin-block: 1rem;
+    font-size: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #000;
     align-items: center;
+    text-decoration: underline;
     
 }
 
@@ -73,7 +73,9 @@ h3 {
 
 /* Content Sections */
 .hero {
-    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #857e5f;   
+    border: .5rem solid #000000;
     padding: 4rem 0;
     text-align: center;
 }
@@ -105,10 +107,19 @@ h3 {
     border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
-    max-width: 1000px; 
-    align-self: center; 
-    border: 1px solid #ccc; 
-    margin-bottom: 1rem; 
+   
+}
+
+.section-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block;
+    aspect-ratio: 16/9;
 }
 
 /* Forms */
@@ -159,6 +170,10 @@ h3 {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+    .section-image {
+        max-width: 100%;
+        border-radius: 4px;
     }
 }
 

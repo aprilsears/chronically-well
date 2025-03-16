@@ -3,20 +3,14 @@ document.getElementById('weightManual').addEventListener('input', function() {
     document.getElementById('weight').value = '';
 });
 
-document.getElementById('weight').addEventListener('change', function() {
-    document.getElementById('weightManual').value = '';
-});
-
 document.getElementById('macroForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get weight from either manual input or dropdown
-    const weightManual = document.getElementById('weightManual').value;
-    const weightDropdown = document.getElementById('weight').value;
-    const weight = parseFloat(weightManual || weightDropdown);
+    // Get weight from manual input
+    const weight = parseFloat(document.getElementById('weightManual').value);
     
     if (!weight) {
-        alert('Please enter or select a weight');
+        alert('Please enter your weight');
         return;
     }
     

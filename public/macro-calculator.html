@@ -24,26 +24,17 @@
         <h2>Macronutrient-Calculator</h2>
         <form id="macroForm">
             <div class="form-group">
-                <label for="weight">Weight (lbs):</label>
-                <div class="weight-input-group">
-                    <input type="number" id="weightManual" min="70" max="400" placeholder="Enter weight" class="weight-input">
-                    <span class="or-divider">or</span>
-                    <select id="weight" class="weight-select">
-                        <option value="">Select weight</option>
-                        <script>
-                            for(let i = 70; i <= 400; i++) {
-                                document.write(`<option value="${i}">${i} lbs</option>`);
-                            }
-                        </script>
-                    </select>
-                </div>
+                <label for="weightManual">Weight (lbs):</label>
+                <input type="number" id="weightManual" required min="1" max="1000" step="0.1">
             </div>
             <div class="form-group">
-                <label for="activity">Activity Level (8-10):</label>
+                <label for="activity">Activity Level:</label>
                 <select id="activity" required>
-                    <option value="8">8 - Sedentary</option>
-                    <option value="9">9 - Moderately Active</option>
-                    <option value="10">10 - Extremely Active</option>
+                    <option value="6">Sedentary</option>
+                    <option value="7">Light Activity</option>
+                    <option value="8">Moderate Activity</option>
+                    <option value="9">Very Active</option>
+                    <option value="10">Extra Active</option>
                 </select>
             </div>
             <button type="submit">Calculate</button>
