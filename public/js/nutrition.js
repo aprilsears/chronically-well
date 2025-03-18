@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const foodQueryInput = document.getElementById('food-query');
     const nutritionResults = document.getElementById('nutrition-results');
 
+    // Checking if form exists in the DOM
     if (!nutritionForm) {
         console.error('nutritionForm element not found');
         return;
@@ -29,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
             displayNutritionResults(data);
         } catch (error) {
             console.error('Error fetching nutrition data:', error);
-            displayErrorMessage('Error fetching nutrition data. Please try again later.');
+            displayErrorMessage('Food not found. Please try a different query.');
         }
-    });
+    }); 
 
     function displayNutritionResults(data) {
         nutritionResults.innerHTML = '';
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Fat: ${food.nf_total_fat}g</p>
                 `;
 
-                nutritionResults.appendChild(foodCard);
+                nutritionResults.appendChild(foodCard); 
             });
         } else {
             displayErrorMessage('Food not found. Please try a different query.');
@@ -59,4 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayErrorMessage(message) {
         nutritionResults.innerHTML = `<p class="error-message">${message}</p>`;
     }
-});
+}); 

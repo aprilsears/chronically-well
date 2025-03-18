@@ -1,4 +1,4 @@
-// Add event listeners for weight inputs
+// event listeners for weight inputs
 document.getElementById('weightManual').addEventListener('input', function() {
     document.getElementById('weight').value = '';
 });

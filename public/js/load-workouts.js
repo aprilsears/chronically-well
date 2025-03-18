@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         categories.forEach(category => {
             const categorySection = document.createElement('div');
             categorySection.classList.add('exercise-category');
-            
             const categoryHeader = document.createElement('h2');
             categoryHeader.classList.add('section-header');
             categoryHeader.textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} Exercises`;
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const exercises = workoutDatabase[category].exercises;
 
             exercises.forEach(workout => {
-                // Creates exercise card
+                // exercise card
                 const workoutCard = document.createElement('div');
                 workoutCard.classList.add('exercise-card');
 
@@ -31,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 workoutCard.appendChild(exerciseHeader);
                 
-                // Create details section
+                //details section
                 const exerciseDetails = document.createElement('div');
                 exerciseDetails.classList.add('exercise-details');
                 
-                // Create video container
+                // video container
                 const exerciseVideo = document.createElement('div');
                 exerciseVideo.classList.add('exercise-video');
                 
@@ -52,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 videoContainer.appendChild(videoIframe);
                 exerciseVideo.appendChild(videoContainer);
                 
-                // Creates exercise info container
+                // exercise info container
                 const exerciseInfo = document.createElement('div');
                 exerciseInfo.classList.add('exercise-info');
                 
-                // Adds exercise details
+                // exercise details
                 const setsInfo = document.createElement('p');
                 setsInfo.innerHTML = `<strong>Sets:</strong> ${workout.sets}`;
                 
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 exerciseInfo.appendChild(modsLabel);
                 exerciseInfo.appendChild(modsList);
                 
-                // Add video and info to details
+                // video and info to details
                 exerciseDetails.appendChild(exerciseVideo);
                 exerciseDetails.appendChild(exerciseInfo);
             

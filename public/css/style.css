@@ -79,17 +79,37 @@ h3 {
     padding: 4rem 0;
     text-align: center;
 }
-.disclaimer-container {
+
+.medical-disclaimer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
-    gap: 1rem;
-    padding: 3rem; 
+    background-image: url(../images/alexandr-podvalny-tE7_jvK-_YU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
     width: 100%;
-    margin: 0 auto;
-
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
 }
+.medical-disclaimer div {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.medical-disclaimer p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
 
 .content-section {
     display: flex;
@@ -112,12 +132,11 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: white;
+    background: rgba(255, 255, 255, 0.748);
     padding: 1rem;
     margin: 1rem;
-    border-radius: 1px;
+    border-radius: 3rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 100%;
    
 }
 
@@ -144,20 +163,20 @@ h3 {
 }
 
 #nutrition-form button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
-    margin: 10px;
-    border: solid 1px #000000;  
-    border-radius: 10px;
+    margin: 1rem;
+    border: 4px solid #000000;  
+    border-radius: 25px;
     font-size: 16px;
 }
 
 #nutrition-form button[type="submit"]:hover {
-    background-color: #114c14;
+    background-color: #0056b3;
 }
 
-/* Error Messages */
+/* Error Message */
 .error-message {
     color: red;
     font-weight: bold;
@@ -187,5 +206,37 @@ h3 {
         max-width: 100%;
         border-radius: 4px;
     }
-}
+        
+   
+@media (max-width: 480px) {
 
+    h1, h2, h3 {
+        font-size: 2rem;
+    }
+
+    .medical-disclaimer {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .content-card {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border-radius: 1.5rem;
+    }
+
+    #nutrition-form input[type="text"] {
+        width: 90%;
+        margin: 5px;
+    }
+
+    .primary-header {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+}
+}

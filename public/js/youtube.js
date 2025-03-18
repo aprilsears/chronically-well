@@ -22,7 +22,7 @@ function extractVideoIds() {
     return videoIds;
 }
 
-// Get video details from our server's YouTube API endpoint
+// Get video details from server's YouTube API endpoint
 async function fetchVideoDetails(videoIds) {
     try {
         const response = await fetch(`/api/youtube/videos?ids=${videoIds.join(',')}`);
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function onYouTubeIframeAPIReady() {
-    // Make sure we have at least one video ID before creating the player
+    // Make sure at least one video ID before creating the player
     if (videoIds.length === 0) {
         videoIds = extractVideoIds();
     }
