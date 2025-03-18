@@ -32,14 +32,13 @@ The project is organized as follows:
 | **Responsive Design** | • Implemented responsive layouts using Flexbox<br>• Created media queries for different screen sizes<br>• Built with mobile-first approach |
 
 **How to Download**
-1. Set up required API keys
-Before installing the application, you'll need to obtain these API keys:
+1. Set up: Before installing the application, you'll need to obtain these API keys:
 
     A. Nutritionix API: For nutrition data lookups; Sign up at Nutritionix API
-    Create an application to get your App ID and API Key
+    Create an application to get your App ID and API Key @ https://developer.nutritionix.com/signup
 
     B. YouTube API (Google Cloud): For video metadata
-    Sign up for a Google Cloud account
+    Sign up for a Google Cloud account @ https://console.cloud.google.com/
     Create a project and enable the YouTube Data API v3
     Create API credentials for your project
 
