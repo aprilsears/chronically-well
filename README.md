@@ -1,4 +1,5 @@
 # chronically-well
+
 Overview:
 
 A Code: You capstone project utilizing 3rd party API's while also highlighting HTML, CSS, and JavaScript abilities.
@@ -10,7 +11,6 @@ Most fitness applications lack accommodations for individuals with chronic illne
 
 ## Project Organization
 
-The project is organized as follows:
 
 | Page | Description |
 |------|-------------|
@@ -21,7 +21,9 @@ The project is organized as follows:
 | **Medical Disclaimer** | Important health information for users, clarifying that the site provides educational content but not medical advice, and encouraging consultation with healthcare professionals. |
 
 
+
 ## Capstone Requirements Fulfilled
+
 
 | Requirement | Implementation |
 |-------------|----------------|
@@ -31,7 +33,8 @@ The project is organized as follows:
 | **Visualize data in a user-friendly way** | • Designed organized exercise cards with clear visual hierarchy<br>• Created macro-calculator with specific results |
 | **Responsive Design** | • Implemented responsive layouts using Flexbox<br>• Created media queries for different screen sizes<br>• Built with mobile-first approach |
 
-**How to Download**
+
+## How to Download
 1. Set up: Before installing the application, you'll need to obtain these API keys:
 
     A. Nutritionix API: For nutrition data lookups; Sign up at Nutritionix API
