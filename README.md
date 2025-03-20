@@ -37,11 +37,17 @@ The project is organized as follows:
     A. Nutritionix API: For nutrition data lookups; Sign up at Nutritionix API
     Create an application to get your App ID and API Key @ https://developer.nutritionix.com/signup
 
-    B. YouTube API (Google Cloud): For video metadata
-    Sign up for a Google Cloud account @ https://console.cloud.google.com/
-    Create a project and enable the YouTube Data API v3
-    Create API credentials for your project
-
+    B. YouTube API (Google Cloud): 
+      1. Go to the Google Cloud Console: https://console.cloud.google.com/
+      2. Create a new project or select an existing one
+      3. Enable the YouTube Data API v3:
+         - In the navigation menu, click "APIs & Services" > "Library"
+         - Search for "YouTube Data API v3"
+         - Click "Enable"
+      4. Create credentials:
+         - Go to "APIs & Services" > "Credentials"
+         - Click "Create Credentials" > "API key"
+         - You will use this API key when you create a `.env` file
 
 2. **Clone the repository using GIT**
    ```bash
@@ -54,22 +60,26 @@ The project is organized as follows:
    ```
 
 4. **Install dependencies**
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 5. **Create environment variables file**
-Create a file named .env in the project root directory with the following content:
-NUTRITIONIX_APP_ID=your_app_id_here
-NUTRITIONIX_API_KEY=your_api_key_here
-YOUTUBE_API_KEY=your_youtube_api_key_here
-PORT=3002
+   Create a file named `.env` in the project root directory with the following content:
+
+   ```env
+   NUTRITIONIX_APP_ID=your_app_id_here
+   NUTRITIONIX_API_KEY=your_api_key_here
+   YOUTUBE_API_KEY=your_youtube_api_key_here
+   PORT=3002
+   ```
 
 6. **Start the server**
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
+
 7. **Access the application**
-Open your browser and navigate to:
-```bash
-http://localhost:3002
-```
+   Open your browser and navigate to:
+   ```bash
+   http://localhost:3002
+   ```
